@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% if Ticket %}
+        <div>
+            <p>
+                Titre : {{ Ticket.titre }}
+            </p>
+            <p>
+                Personne : {{ Ticket.personne }}
+            </p>
+            <p>
+                Description : {{ Ticket.description }}
+            </p>
+            <p>
+                Statut : {{ Ticket.statut }}
+            </p>
+            <hr>
+            <a href="/" class="btn btn-outline-secondary">Retour</a>
+        </div>
+    {% endif %}
+{% endblock %}
+
+{% block title %}
+
+{% endblock %}

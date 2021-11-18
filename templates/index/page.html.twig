@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+
+<title>Hello Ticket!</title>
+
+{% block body %}
+    <h1>Ticket : ({{ Ticket.getTotalItemCount }})</h1>
+    <ul>
+        {% for Ticket in Ticket %}
+            <li>{{ Ticket.titre }}</li>
+        {% endfor %}
+    </ul>
+    {{ knp_pagination_render(Ticket) }}
+{% endblock %}
